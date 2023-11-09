@@ -1,15 +1,7 @@
-{{!-- <div>
-    {{#each }}
-    <h2>{{name}}</h2>
-    <span><img src="{{cover_url}}" alt=""></span>
-    <button>See tracks</button>
-</div> --}}
-
-
 <div>
-    {{#each album}}
+    {{#each albumsArray}}
     <h2>{{this.name}}</h2>
-    <span><img src="{{this.image.0.url}}" alt="album image"></span>
-    <button>View tracks</button>
+    <span><img src="{{this.images.1.url}}" alt="Album image"></span>
+    <a href="/tracks/{{this.id}}"><button>View track</button></a>
     {{/each}}
 </div>

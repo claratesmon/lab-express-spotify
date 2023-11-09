@@ -1,0 +1,30 @@
+<section>
+    <h1>TRACKS</h1>
+    {{#each tracksArray}}
+    <ul>
+        <div>
+            <li>
+                {{this.name}}
+            </li>
+            {{#if this.preview_url}}
+            <audio controls src="{{this.preview_url}}"></audio>
+            {{else}}
+            <p>preview not available</p>
+            {{/if}}
+        </div>
+    </ul>
+    {{/each}}
+</section>
+
+{{!-- {{#each tracksArray}}
+<ul>
+    <div class="song-item">
+        <li class="song-name">{{this.name}}</li>
+        {{#if this.preview_url}}
+        <audio controls src="{{this.preview_url}}"></audio>
+        {{else}}
+        <p>Preview not available</p>
+        {{/if}}
+    </div>
+</ul>
+{{/each}} --}}
