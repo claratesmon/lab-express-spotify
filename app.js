@@ -85,7 +85,7 @@ app.get("/tracks/:albumId", (req, res) => {
         res.send({trackName, previewUrl}) */
         const tracksArray = data.body.items
         //res.send({tracksArray})
-       res.render("tracks", {tracks: tracksArray})
+       res.render("tracks", {tracksArray})
        console.log(tracksArray); //it is an array and need to be an object to be valid for hbs
     })
     .catch((error) => console.log(`You're missing something:`, error))
